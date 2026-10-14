@@ -1,0 +1,38 @@
+:root {
+  --paper: #F3EFE7; --card: #FFFFFF; --chip: #ECE7DD; --ink: #1B1A17; --muted: #7A746A;
+  --accent: #2B50E8; --line: #DDD7CC;
+  --display: Didot, "Bodoni 72", "Bodoni MT", "Playfair Display", Georgia, serif;
+  --ui: Futura, "Century Gothic", "Avenir Next", "Trebuchet MS", sans-serif;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --paper: #161513; --card: #23211E; --chip: #2F2C28; --ink: #F2EEE6; --muted: #9C968C; --accent: #7D96FF; --line: #3A3632; }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.6 var(--ui); }
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.wrap { max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; }
+header.site { display: flex; align-items: center; gap: 12px; margin-bottom: 40px; }
+header.site img { width: 40px; height: 40px; border-radius: 10px; }
+header.site a { font: 700 22px var(--display); color: var(--ink); text-decoration: none; }
+header.site nav { margin-left: auto; display: flex; gap: 16px; font-size: 14px; }
+header.site nav a { font: 500 14px var(--ui); color: var(--muted); }
+h1 { font: 700 clamp(40px, 8vw, 64px)/1.05 var(--display); margin: 0 0 12px; letter-spacing: -0.01em; }
+h2 { font: 700 26px/1.2 var(--display); margin: 40px 0 8px; }
+h3 { font: 700 16px var(--ui); margin: 24px 0 4px; }
+.lede { font-size: 20px; color: var(--muted); margin: 0 0 28px; }
+.label { font: 700 12px var(--ui); letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+.meta { font: 13px var(--mono); color: var(--muted); }
+.card { background: var(--card); border-radius: 20px; padding: 22px 24px; margin: 18px 0; box-shadow: 0 8px 30px rgba(0,0,0,.06); }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin: 24px 0; }
+.grid .card { margin: 0; }
+.grid .card strong { display: block; font: 700 17px var(--ui); margin-bottom: 4px; }
+.grid .card span { color: var(--muted); font-size: 15px; }
+.hero { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; margin-bottom: 12px; }
+.hero img { width: 132px; height: 132px; border-radius: 30px; box-shadow: 0 16px 40px rgba(0,0,0,.18); }
+.pill { display: inline-block; background: var(--accent); color: #fff; padding: 12px 22px; border-radius: 14px; font-weight: 700; text-decoration: none; }
+@media (prefers-color-scheme: dark) { .pill { color: #0B1033; } }
+ul { padding-left: 20px; } li { margin: 6px 0; }
+footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 14px; color: var(--muted); display: flex; gap: 18px; flex-wrap: wrap; }
+footer a { color: var(--muted); }
